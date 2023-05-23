@@ -11,7 +11,7 @@ public class DemoController {
 	@RequestMapping(value="/", method=RequestMethod.GET)
 	public ModelAndView index(ModelAndView mav) {
 		mav.setViewName("index");
-		mav.addObject("msg", "お名前を入力してください");
+		mav.addObject("msg", "名前を入力してね");
 		return mav;
 	}
 
@@ -20,7 +20,7 @@ public class DemoController {
 			@RequestParam("text1")String str,
 			ModelAndView mav) {
 		mav.setViewName("index");
-		mav.addObject("msg", "こんにちは" + str + "さん！");
+		mav.addObject("msg", "こんにちは" + str + "さん");
 		mav.addObject("value", str);
 		return mav;
 	}
